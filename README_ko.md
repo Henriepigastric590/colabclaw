@@ -1,72 +1,83 @@
-# ColabCraw
+<div align="center">
 
-ColabCraw는 **Google Colab에서 OpenClaw를 실행하고**, 그 환경을 개인 자동화 워크플로 실험 공간으로 활용하는 방법을 정리하기 위한 저장소입니다.
+# 🦀 ColabClaw
 
-이 저장소의 목적은 단순 설치 메모가 아니라, Colab 위에서 OpenClaw를 활용해 실제로 쓸 만한 흐름을 만드는 것입니다.
+### Google Colab 위에서 만드는 나만의 AI 자동화 워크스페이스
 
-예를 들면 다음과 같은 흐름을 다룹니다.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-FF6B6B?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMyAxNGgxOEwxMiAyeiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=&logoColor=white)](https://github.com/openclaw/openclaw)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.org)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+[![Maton](https://img.shields.io/badge/Maton-6C63FF?style=for-the-badge&logoColor=white)](https://www.maton.ai)
 
-- Colab에서 임시 OpenClaw 환경 띄우기
-- Telegram으로 OpenClaw와 대화하기
-- GitHub를 작업 저장소로 사용하기
-- Gmail을 Maton으로 연동하기
-- 주요 메일 읽기
-- 답장 초안 자동 생성하기
-- 주기적으로 필요한 정보를 갱신하기
+<br/>
 
-즉, 이 저장소는 **설치법 + 실제 활용법**을 함께 정리하는 것을 목표로 합니다.
+**ColabClaw**는 Google Colab을 OpenClaw 기반의 개인 자동화 허브로 바꿔줍니다.
+단순 설치가 아닌 — 이메일, GitHub, 스케줄 작업을 위한 **실전 워크플로**를 제공합니다.
 
----
+[🚀 빠른 시작](#-빠른-시작) · [📋 기능](#-기능) · [🔄 워크플로](#-워크플로-개요) · [🛠 설정 가이드](#-전체-설정-가이드) · [🇺🇸 English](./README.md)
 
-## 이 저장소에서 다루려는 것
+<br/>
 
-이 가이드는 Google Colab을 OpenClaw 실험 공간으로 사용하는 방법을 단계별로 설명하기 위해 준비되고 있습니다.
+[![Stars](https://img.shields.io/github/stars/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/stargazers)
+[![Forks](https://img.shields.io/github/forks/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/network/members)
+[![Watchers](https://img.shields.io/github/watchers/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/watchers)
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/commits/main)
 
-포함하려는 주요 내용은 다음과 같습니다.
-
-- Colab 안에서 터미널 띄우기
-- OpenClaw 설치하기
-- onboard 실행하기
-- 외부 서비스 계정 준비하기
-- Telegram 연결하기
-- GitHub 저장소를 만들고 작업 기반으로 활용하기
-- Maton을 통해 Gmail 연동하기
-- 메일 읽기 및 요약하기
-- 중요한 메일에 대한 답장 초안 자동 생성하기
-- 주기적으로 정보 갱신 작업 수행하기
+</div>
 
 ---
 
-## 핵심 아이디어
+## 📋 기능
 
-ColabCraw의 기본 아이디어는 단순합니다.
-
-1. Google Colab에 접속한다
-2. Colab 안에서 터미널을 띄운다
-3. OpenClaw를 설치한다
-4. 온보딩을 진행한다
-5. 필요한 외부 서비스를 연결한다
-6. 이메일, GitHub, 주기적 갱신 작업을 중심으로 자동화 흐름을 만든다
-
-Colab은 장기 운영용 서버로는 적합하지 않을 수 있지만, 아래 목적에는 매우 유용합니다.
-
-- 빠른 테스트
-- 프로토타이핑
-- 데모 제작
-- 교육/튜토리얼
-- 워크플로 검증
+| 기능 | 설명 | 서비스 |
+|------|------|--------|
+| 🖥️ **Colab 터미널** | Google Colab 안에서 터미널 실행 | Google Colab |
+| 🤖 **OpenClaw 엔진** | 자동화 핵심 엔진 설치 및 실행 | OpenClaw |
+| 💬 **채팅 인터페이스** | Telegram으로 OpenClaw와 대화 | Telegram |
+| 📧 **이메일 자동화** | Gmail 읽기, 요약, 답장 초안 자동 생성 | Gmail + Maton |
+| 📁 **GitHub 워크스페이스** | 저장소를 구조화된 작업 공간으로 활용 | GitHub |
+| 🔄 **주기적 갱신** | 정보를 주기적으로 수집하고 업데이트 | Cron / OpenClaw |
 
 ---
 
-## Colab에서 시작하는 기본 순서
+## 🔄 워크플로 개요
 
-### 1. Google Colab에 접속한다
+```mermaid
+flowchart LR
+    A[🖥️ Google Colab] --> B[🤖 OpenClaw]
+    B --> C[💬 Telegram]
+    B --> D[📧 Gmail via Maton]
+    B --> E[📁 GitHub Repo]
 
-새 Colab 노트북을 하나 엽니다.
+    D --> F[📨 메일 읽기]
+    F --> G[📝 답장 초안 생성]
+    G --> H{👤 사람 승인}
+    H -->|승인| I[📤 발송]
+    H -->|수정| G
 
-### 2. Colab에서 터미널을 띄운다
+    E --> J[📋 작업 추적]
+    E --> K[🔄 주기적 갱신]
 
-노트북 셀에서 아래를 실행합니다.
+    style A fill:#F9AB00,color:#000
+    style B fill:#FF6B6B,color:#fff
+    style C fill:#2CA5E0,color:#fff
+    style D fill:#D14836,color:#fff
+    style E fill:#181717,color:#fff
+    style H fill:#4CAF50,color:#fff
+```
+
+---
+
+## 🚀 빠른 시작
+
+### Step 1: Google Colab 접속
+
+[Google Colab](https://colab.research.google.com)에서 새 노트북을 엽니다.
+
+### Step 2: 터미널 실행
 
 ```python
 !pip install colab-xterm
@@ -74,117 +85,213 @@ Colab은 장기 운영용 서버로는 적합하지 않을 수 있지만, 아래
 %xterm
 ```
 
-이렇게 하면 Colab 안에서 셸 명령을 편하게 실행할 수 있는 터미널이 열립니다.
-
-### 3. 터미널에서 OpenClaw를 설치한다
-
-열린 터미널에서 아래 명령을 실행합니다.
+### Step 3: OpenClaw 설치
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
 ```
 
-이 단계에서 OpenClaw 설치와 기본 온보딩을 진행합니다.
+> ✅ 완료! OpenClaw가 Colab 환경에서 실행됩니다.
 
 ---
 
-## 본격 설정 전에 가입해둘 서비스
+## 🔑 필요한 계정
 
-OpenClaw를 제대로 활용하려면, 본격적인 설정 전에 아래 서비스에 가입해두는 것이 좋습니다.
+전체 워크플로를 구성하기 전에 아래 서비스를 준비하세요:
 
-- **Telegram** — OpenClaw와 소통하기 위한 채널
-- **GitHub** — 저장소 기반 작업 관리 및 문서화
-- **Gmail** — 메일 읽기 및 답장 초안 생성 대상
-- **Maton** (<https://www.maton.ai>) — Gmail 연동을 위한 서비스
+```mermaid
+flowchart TD
+    subgraph Required["🔑 준비할 계정"]
+        T[💬 Telegram<br/>OpenClaw 대화]
+        GH[📁 GitHub<br/>작업 관리 & 추적]
+        GM[📧 Gmail<br/>메일 읽기 & 초안]
+        M[🔗 Maton<br/>Gmail 연동]
+    end
 
-이 서비스들을 조합하면 꽤 실용적인 자동화 흐름을 만들 수 있습니다.
+    T --> OC[🤖 OpenClaw]
+    GH --> OC
+    GM --> M
+    M --> OC
 
----
+    style OC fill:#FF6B6B,color:#fff
+    style T fill:#2CA5E0,color:#fff
+    style GH fill:#181717,color:#fff
+    style GM fill:#D14836,color:#fff
+    style M fill:#6C63FF,color:#fff
+```
 
-## 만들고자 하는 활용 흐름
-
-이 저장소는 아래와 같은 실제 활용 시나리오를 중심으로 정리할 예정입니다.
-
-### 1. GitHub 저장소를 작업 공간으로 사용
-GitHub 저장소를 하나 만들고, 다음과 같은 것들을 저장하고 관리합니다.
-
-- 메모
-- 수집한 정보
-- 워크플로 문서
-- 자동화 스크립트
-- 주기적 갱신 결과
-
-### 2. 주기적으로 필요한 정보 갱신
-사용자가 보고 싶은 정보를 주기적으로 수집하거나 갱신하도록 구성합니다.
-
-예를 들면:
-
-- 저장소 상태 확인
-- 요약 리포트 갱신
-- 이메일 관련 업데이트 확인
-- 반복 작업 결과 정리
-- 가벼운 모니터링 결과 저장
-
-### 3. Gmail을 읽고 중요한 메일에 답장 초안 만들기
-이 시스템은 다음을 목표로 합니다.
-
-- Gmail 메일 읽기
-- 중요한 메일 판별
-- 메일 내용 요약
-- 중요한 메일에 대한 **답장 초안 자동 생성**
-
-여기서 중요한 원칙은 다음과 같습니다.
-
-- **초안 생성은 자동화 가능**
-- **실제 발송은 사람이 승인한 뒤에만 수행**
-
-이렇게 해야 안전하고 실제 사용에도 맞습니다.
+| 서비스 | 용도 | 링크 |
+|--------|------|------|
+| **Telegram** | OpenClaw와 소통 | [telegram.org](https://telegram.org) |
+| **GitHub** | 저장소 기반 작업 관리 | [github.com](https://github.com) |
+| **Gmail** | 메일 읽기 & 답장 초안 생성 | [mail.google.com](https://mail.google.com) |
+| **Maton** | 안전한 Gmail 연결 | [maton.ai](https://www.maton.ai) |
 
 ---
 
-## 왜 유용한가?
+## 🛠 전체 설정 가이드
 
-이 흐름은 사실상 가벼운 개인 운영 비서처럼 동작할 수 있습니다.
+```mermaid
+timeline
+    title ColabClaw 설정 여정
+    section 환경 구축
+        Colab 접속 : 새 노트북 열기
+        터미널 실행 : colab-xterm 설치
+        OpenClaw 설치 : curl + 온보딩
+    section 서비스 연결
+        Telegram : 채팅 인터페이스 설정
+        GitHub : 워크스페이스 저장소 생성
+        Maton : Gmail 안전 연결
+    section 자동화 구성
+        메일 읽기 : 수신 메일 요약
+        초안 생성 : 답장 초안 자동 작성
+        주기적 갱신 : 정보 주기 업데이트
+```
 
-예를 들어 다음을 도와줄 수 있습니다.
+### 📁 GitHub를 워크스페이스로 활용
 
-- 메일 확인
-- 답장 초안 준비
-- GitHub 기반 작업 정리
-- 정기 요약 유지
-- Colab 기반 실험 환경 구성
+GitHub 저장소에 다음과 같은 것들을 저장하고 관리합니다:
 
-즉, 단순히 OpenClaw를 설치하는 것이 아니라,
-**실제로 쓸 수 있는 개인 자동화 흐름**을 만드는 방향입니다.
+```
+📂 your-workspace-repo/
+├── 📝 notes/              # 개인 메모
+├── 📊 collected-info/     # 수집된 정보
+├── 📋 workflows/          # 자동화 스크립트
+├── 📈 reports/            # 정기 요약 리포트
+└── 🔄 updates/            # 주기적 갱신 결과
+```
+
+### 📧 이메일 자동화 파이프라인
+
+이메일 워크플로는 **사람이 포함된(Human-in-the-loop)** 설계를 따릅니다:
+
+```mermaid
+flowchart TD
+    A[📨 새 메일 도착] --> B[🤖 OpenClaw가 메일 읽기]
+    B --> C[🏷️ 중요도 분류]
+    C -->|중요| D[📝 요약 생성]
+    C -->|낮은 우선순위| E[📂 보관]
+    D --> F[✍️ 답장 초안 작성]
+    F --> G[👤 사람이 초안 검토]
+    G -->|✅ 승인| H[📤 발송]
+    G -->|✏️ 수정| F
+    G -->|❌ 폐기| I[🗑️ 초안 삭제]
+
+    style A fill:#D14836,color:#fff
+    style B fill:#FF6B6B,color:#fff
+    style G fill:#4CAF50,color:#fff
+    style H fill:#2196F3,color:#fff
+```
+
+> 💡 **핵심 원칙:** 초안 생성은 자동화, 실제 발송은 반드시 사람이 승인한 후에만!
+
+### 🔄 주기적 갱신
+
+반복 작업을 스케줄링하여 워크스페이스를 최신 상태로 유지합니다:
+
+- 📊 저장소 상태 확인
+- 📋 정기 리포트 요약
+- 📧 이메일 관련 업데이트 모니터링
+- 🔁 반복 작업 결과 수집
+- 📡 가벼운 모니터링 출력 저장
 
 ---
 
-## 앞으로 더 자세히 작성할 내용
+## 🎯 활용 사례
 
-앞으로 이 저장소에는 다음과 같은 내용이 더 추가될 예정입니다.
+> *ColabClaw는 가벼운 개인 운영 비서처럼 동작합니다.*
 
-- 더 자세한 Colab 설치 가이드
-- Gmail + Maton 연동 방법
-- Telegram 연결 방법
-- GitHub 기반 작업 흐름 예시
-- Colab 환경의 한계와 주의사항
-- 초안 자동 생성 예시
-- 주기적 갱신 자동화 예시
+```mermaid
+mindmap
+  root((ColabClaw))
+    이메일 운영
+      Gmail 읽기
+      요약
+      답장 초안
+      사람 승인
+    GitHub 운영
+      작업 추적
+      메모 저장
+      문서 관리
+    자동화
+      주기적 갱신
+      정기 리포트
+      모니터링
+    환경
+      빠른 테스트
+      프로토타이핑
+      데모
+      교육
+```
 
 ---
 
-## 관련 링크
+## 📍 로드맵
 
-- OpenClaw: <https://github.com/openclaw/openclaw>
-- OpenClaw 문서: <https://docs.openclaw.ai>
-- Maton: <https://www.maton.ai>
-- Telegram: <https://telegram.org>
-- GitHub: <https://github.com>
-- Gmail: <https://mail.google.com>
+- [x] 저장소 구축
+- [x] 기본 README & 문서 작성
+- [x] 이메일 → 이슈 워크플로 설계
+- [ ] 스크린샷 포함 상세 Colab 설정 튜토리얼
+- [ ] Gmail + Maton 연동 가이드
+- [ ] Telegram 연결 워크스루
+- [ ] GitHub 워크플로 예시
+- [ ] 답장 초안 생성 예시
+- [ ] 주기적 갱신 자동화 예시
+- [ ] Colab 한계 및 모범 사례
 
 ---
 
-## English version
+## 🔗 관련 링크
 
-영문 문서는 [README.md](./README.md)에서 볼 수 있습니다.
+| 리소스 | 링크 |
+|--------|------|
+| 🤖 OpenClaw | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
+| 📖 OpenClaw 문서 | [docs.openclaw.ai](https://docs.openclaw.ai) |
+| 🔗 Maton | [maton.ai](https://www.maton.ai) |
+| 💬 Telegram | [telegram.org](https://telegram.org) |
+| 📁 GitHub | [github.com](https://github.com) |
+| 📧 Gmail | [mail.google.com](https://mail.google.com) |
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabcraw&type=Date)](https://star-history.com/#tykimos/colabcraw&Date)
+
+---
+
+## 🤝 기여하기
+
+기여를 환영합니다! 다음 방법으로 참여해 주세요:
+
+- ⭐ 이 저장소에 스타 남기기
+- 🐛 [이슈](https://github.com/tykimos/colabcraw/issues) 열기
+- 🔀 [풀 리퀘스트](https://github.com/tykimos/colabcraw/pulls) 제출하기
+
+---
+
+## 📊 활동
+
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw?label=마지막%20커밋)](https://github.com/tykimos/colabcraw/commits/main)
+[![Issues](https://img.shields.io/github/issues/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/issues)
+[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/pulls)
+[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabcraw)](https://github.com/tykimos/colabcraw)
+
+---
+
+## 📜 라이선스
+
+이 프로젝트는 MIT 라이선스를 따릅니다.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+<div align="center">
+
+**AI 자동화 커뮤니티를 위해 ❤️으로 만들었습니다**
+
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabcraw&label=방문자&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabcraw)
+
+</div>
