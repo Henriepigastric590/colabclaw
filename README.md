@@ -11,6 +11,10 @@ Google Colab에서 OpenClaw를 실험적으로 사용해보기 위한 예제 저
 ## 포함 내용
 
 - `index.html` : 간단한 소개 랜딩 페이지
+- `docs/email-issue-workflow.md` : Gmail → GitHub Issue → 답장 초안 워크플로 문서
+- `.github/ISSUE_TEMPLATE/email_from_gmail.md` : 메일 이슈 템플릿
+- `.github/labels-plan.md` : 라벨 설계안
+- `.github/comment-templates.md` : 초안/발송 로그 코멘트 템플릿
 
 ## 배경
 
