@@ -51,26 +51,19 @@ Not just installation — **real workflows** for email, GitHub, and scheduled ta
 
 ```mermaid
 flowchart LR
-    A[🖥️ Google Colab] --> B[🤖 OpenClaw]
-    B --> C[💬 Telegram]
-    B --> D[📧 Gmail via Maton]
-    B --> E[📁 GitHub Repo]
+    A[Google Colab] --> B[OpenClaw]
+    B --> C[Telegram]
+    B --> D[Gmail via Maton]
+    B --> E[GitHub Repo]
 
-    D --> F[📨 Read Emails]
-    F --> G[📝 Generate Draft Reply]
-    G --> H{👤 Human Approval}
-    H -->|Approved| I[📤 Send Reply]
+    D --> F[Read Emails]
+    F --> G[Generate Draft Reply]
+    G --> H{Human Approval}
+    H -->|Approved| I[Send Reply]
     H -->|Edit| G
 
-    E --> J[📋 Track Tasks]
-    E --> K[🔄 Periodic Updates]
-
-    style A fill:#F9AB00,color:#000
-    style B fill:#FF6B6B,color:#fff
-    style C fill:#2CA5E0,color:#fff
-    style D fill:#D14836,color:#fff
-    style E fill:#181717,color:#fff
-    style H fill:#4CAF50,color:#fff
+    E --> J[Track Tasks]
+    E --> K[Periodic Updates]
 ```
 
 ---
@@ -106,23 +99,17 @@ Before configuring the full workflow, set up these services:
 
 ```mermaid
 flowchart TD
-    subgraph Required["🔑 Accounts to Prepare"]
-        T[💬 Telegram<br/>Chat with OpenClaw]
-        GH[📁 GitHub<br/>Workspace & Tracking]
-        GM[📧 Gmail<br/>Email Reading & Drafts]
-        M[🔗 Maton<br/>Gmail Integration]
+    subgraph Required["Accounts to Prepare"]
+        T[Telegram<br/>Chat with OpenClaw]
+        GH[GitHub<br/>Workspace & Tracking]
+        GM[Gmail<br/>Email Reading & Drafts]
+        M[Maton<br/>Gmail Integration]
     end
 
-    T --> OC[🤖 OpenClaw]
+    T --> OC[OpenClaw]
     GH --> OC
     GM --> M
     M --> OC
-
-    style OC fill:#FF6B6B,color:#fff
-    style T fill:#2CA5E0,color:#fff
-    style GH fill:#181717,color:#fff
-    style GM fill:#D14836,color:#fff
-    style M fill:#6C63FF,color:#fff
 ```
 
 | Service | Purpose | Link |
@@ -172,20 +159,15 @@ The email workflow follows a **human-in-the-loop** design:
 
 ```mermaid
 flowchart TD
-    A[📨 New Email Arrives] --> B[🤖 OpenClaw Reads Email]
-    B --> C[🏷️ Classify Importance]
-    C -->|Important| D[📝 Generate Summary]
-    C -->|Low Priority| E[📂 Archive]
-    D --> F[✍️ Create Draft Reply]
-    F --> G[👤 Human Reviews Draft]
-    G -->|✅ Approve| H[📤 Send]
-    G -->|✏️ Edit| F
-    G -->|❌ Discard| I[🗑️ Delete Draft]
-
-    style A fill:#D14836,color:#fff
-    style B fill:#FF6B6B,color:#fff
-    style G fill:#4CAF50,color:#fff
-    style H fill:#2196F3,color:#fff
+    A[New Email Arrives] --> B[OpenClaw Reads Email]
+    B --> C[Classify Importance]
+    C -->|Important| D[Generate Summary]
+    C -->|Low Priority| E[Archive]
+    D --> F[Create Draft Reply]
+    F --> G[Human Reviews Draft]
+    G -->|Approve| H[Send]
+    G -->|Edit| F
+    G -->|Discard| I[Delete Draft]
 ```
 
 > 💡 **Key Principle:** Draft generation is automated. Actual sending requires human approval.

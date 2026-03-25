@@ -51,26 +51,19 @@
 
 ```mermaid
 flowchart LR
-    A[🖥️ Google Colab] --> B[🤖 OpenClaw]
-    B --> C[💬 Telegram]
-    B --> D[📧 Gmail via Maton]
-    B --> E[📁 GitHub Repo]
+    A[Google Colab] --> B[OpenClaw]
+    B --> C[Telegram]
+    B --> D[Gmail via Maton]
+    B --> E[GitHub Repo]
 
-    D --> F[📨 메일 읽기]
-    F --> G[📝 답장 초안 생성]
-    G --> H{👤 사람 승인}
-    H -->|승인| I[📤 발송]
+    D --> F[메일 읽기]
+    F --> G[답장 초안 생성]
+    G --> H{사람 승인}
+    H -->|승인| I[발송]
     H -->|수정| G
 
-    E --> J[📋 작업 추적]
-    E --> K[🔄 주기적 갱신]
-
-    style A fill:#F9AB00,color:#000
-    style B fill:#FF6B6B,color:#fff
-    style C fill:#2CA5E0,color:#fff
-    style D fill:#D14836,color:#fff
-    style E fill:#181717,color:#fff
-    style H fill:#4CAF50,color:#fff
+    E --> J[작업 추적]
+    E --> K[주기적 갱신]
 ```
 
 ---
@@ -106,23 +99,17 @@ openclaw onboard --install-daemon
 
 ```mermaid
 flowchart TD
-    subgraph Required["🔑 준비할 계정"]
-        T[💬 Telegram<br/>OpenClaw 대화]
-        GH[📁 GitHub<br/>작업 관리 & 추적]
-        GM[📧 Gmail<br/>메일 읽기 & 초안]
-        M[🔗 Maton<br/>Gmail 연동]
+    subgraph Required["준비할 계정"]
+        T[Telegram<br/>OpenClaw 대화]
+        GH[GitHub<br/>작업 관리 & 추적]
+        GM[Gmail<br/>메일 읽기 & 초안]
+        M[Maton<br/>Gmail 연동]
     end
 
-    T --> OC[🤖 OpenClaw]
+    T --> OC[OpenClaw]
     GH --> OC
     GM --> M
     M --> OC
-
-    style OC fill:#FF6B6B,color:#fff
-    style T fill:#2CA5E0,color:#fff
-    style GH fill:#181717,color:#fff
-    style GM fill:#D14836,color:#fff
-    style M fill:#6C63FF,color:#fff
 ```
 
 | 서비스 | 용도 | 링크 |
@@ -172,20 +159,15 @@ GitHub 저장소에 다음과 같은 것들을 저장하고 관리합니다:
 
 ```mermaid
 flowchart TD
-    A[📨 새 메일 도착] --> B[🤖 OpenClaw가 메일 읽기]
-    B --> C[🏷️ 중요도 분류]
-    C -->|중요| D[📝 요약 생성]
-    C -->|낮은 우선순위| E[📂 보관]
-    D --> F[✍️ 답장 초안 작성]
-    F --> G[👤 사람이 초안 검토]
-    G -->|✅ 승인| H[📤 발송]
-    G -->|✏️ 수정| F
-    G -->|❌ 폐기| I[🗑️ 초안 삭제]
-
-    style A fill:#D14836,color:#fff
-    style B fill:#FF6B6B,color:#fff
-    style G fill:#4CAF50,color:#fff
-    style H fill:#2196F3,color:#fff
+    A[새 메일 도착] --> B[OpenClaw가 메일 읽기]
+    B --> C[중요도 분류]
+    C -->|중요| D[요약 생성]
+    C -->|낮은 우선순위| E[보관]
+    D --> F[답장 초안 작성]
+    F --> G[사람이 초안 검토]
+    G -->|승인| H[발송]
+    G -->|수정| F
+    G -->|폐기| I[초안 삭제]
 ```
 
 > 💡 **핵심 원칙:** 초안 생성은 자동화, 실제 발송은 반드시 사람이 승인한 후에만!
