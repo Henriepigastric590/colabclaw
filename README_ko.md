@@ -35,14 +35,14 @@
 
 ## 왜 ColabClaw를 만들었나요?
 
-오픈클로(OpenClaw) 커뮤니티에서 가장 많이 듣는 이야기는 이렇습니다:
+오픈클로(OpenClaw) GitHub에는 설치 관련 이슈가 끊이지 않습니다. 실제 사례를 보면:
 
-- "설치하다가 환경 충돌이 나서 포기했어요"
-- "Python 버전, 의존성 문제로 반나절을 날렸어요"
-- "내 PC에 뭘 설치하는 게 좀 꺼림직해요"
-- "일단 써보고 싶은데, 설치 과정이 너무 길어요"
+- **macOS 클린 설치에서 모든 방법 실패** — Node v14 PATH가 새로 설치한 v22를 가리고, npm은 EACCES 권한 오류 발생 ([#21464](https://github.com/openclaw/openclaw/issues/21464))
+- **Raspberry Pi에서 npm install이 기기를 망가뜨림** — `@discordjs/opus`에 ARM64 프리빌드가 없어 네이티브 모듈 빌드 실패 ([#23861](https://github.com/openclaw/openclaw/issues/23861))
+- **Apple Silicon에서 sharp 의존성 빌드 실패** — `node-gyp`가 없어 소스 빌드 시도 후 에러 ([#4592](https://github.com/openclaw/openclaw/issues/4592))
+- **업데이트조차 불가** — `node-llama-cpp`가 cmake를 설치하려다 실패, 보안 패치도 못 받는 상황 ([#32025](https://github.com/openclaw/openclaw/issues/32025))
 
-오픈클로를 가르치고 배우는 과정에서 **설치 단계에서 지쳐 포기하는 분들**을 많이 봤습니다. 도구 자체는 훌륭한데, 시작하기 전에 막혀버리는 거죠.
+오픈클로를 가르치고 배우는 과정에서 **설치 단계에서 지쳐 포기하는 분들**을 많이 봤습니다. 도구 자체는 훌륭한데, Node.js 버전 충돌, 네이티브 모듈 빌드 실패, OS별 호환성 문제로 시작하기 전에 막혀버리는 거죠.
 
 그래서 생각했습니다 — **Google Colab에서 바로 실행할 수 있다면?**
 

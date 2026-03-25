@@ -35,14 +35,14 @@
 
 ## Why ColabClaw?
 
-The most common stories we hear from the OpenClaw community:
+Installation issues on OpenClaw's GitHub never stop. Here are real examples:
 
-- "I gave up after running into environment conflicts during installation"
-- "I wasted half a day on Python version and dependency issues"
-- "I'm hesitant to install unfamiliar tools on my personal machine"
-- "I just want to try it out, but the setup process is too long"
+- **All install methods fail on a clean macOS** — Node v14 PATH shadows newly installed v22, npm throws EACCES permission errors ([#21464](https://github.com/openclaw/openclaw/issues/21464))
+- **npm install bricks Raspberry Pi devices** — `@discordjs/opus` lacks ARM64 prebuilds, causing native module build failure ([#23861](https://github.com/openclaw/openclaw/issues/23861))
+- **sharp dependency build fails on Apple Silicon** — `node-gyp` unavailable, source build attempt errors out ([#4592](https://github.com/openclaw/openclaw/issues/4592))
+- **Can't even update** — `node-llama-cpp` fails to install cmake, leaving users stuck without security patches ([#32025](https://github.com/openclaw/openclaw/issues/32025))
 
-While teaching and learning OpenClaw, we've seen **too many people give up at the installation step**. The tool itself is great, but they get stuck before even starting.
+While teaching and learning OpenClaw, we've seen **too many people give up at the installation step**. The tool itself is great, but Node.js version conflicts, native module build failures, and OS-specific compatibility issues block people before they even start.
 
 So we thought — **what if you could run it directly on Google Colab?**
 
