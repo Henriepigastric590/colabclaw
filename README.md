@@ -184,33 +184,6 @@ Schedule recurring tasks to keep your workspace updated:
 
 ---
 
-## 🎯 Use Cases
-
-> *ColabClaw acts like a lightweight personal operations assistant.*
-
-```mermaid
-mindmap
-  root((ColabClaw))
-    Email Ops
-      Read Gmail
-      Summarize
-      Draft Replies
-      Human Approval
-    GitHub Ops
-      Track Tasks
-      Store Notes
-      Manage Docs
-    Automation
-      Scheduled Refresh
-      Periodic Reports
-      Monitoring
-    Environment
-      Quick Testing
-      Prototyping
-      Demos
-      Teaching
-```
-
 ---
 
 ## 📍 Roadmap
