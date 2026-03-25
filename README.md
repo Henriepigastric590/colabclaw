@@ -1,82 +1,185 @@
 # ColabCraw
 
-Google Colab에서 OpenClaw를 실험적으로 사용하고, Gmail 기반 메일 요약/답장 초안 워크플로를 검증하기 위한 저장소입니다.
+ColabCraw is a practical guide for running **OpenClaw in Google Colab** and turning that environment into a lightweight personal automation workspace.
 
-## 무엇을 하려는 저장소인가?
+The main goal of this repository is not just to install OpenClaw, but to show how Colab can be used to:
 
-ColabCraw는 두 가지 방향을 다룹니다.
+- boot a temporary OpenClaw environment,
+- connect through Telegram,
+- use GitHub as a structured workspace,
+- connect Gmail through Maton,
+- read important emails,
+- generate draft replies automatically,
+- and continuously refresh useful information on a schedule.
 
-1. **Google Colab에서 OpenClaw를 테스트하기**
-2. **Gmail 메일을 읽고 답장 초안을 자동으로 만드는 흐름 실험하기**
+This repository is being prepared as a detailed walkthrough focused on **real workflows**, not just a minimal installation note.
 
-핵심 목표는 다음과 같습니다.
+---
 
-- Colab 환경에서 OpenClaw 설치 및 실행 가능성 확인
-- Gmail 메일 요약 자동화
-- 답장 초안 자동 생성
-- 실제 발송은 하지 않고, 우선은 사람이 검토할 수 있는 형태로 저장
+## What this repository will cover
 
-## 왜 이걸 하나?
+This guide is intended to explain, step by step, how to use Google Colab as a convenient place to experiment with OpenClaw.
 
-OpenClaw는 보통 로컬 머신이나 서버 환경에서 더 자연스럽게 운영되지만,
-Colab은 빠른 실험, 개념 검증, 데모 제작에 꽤 유용합니다.
+Planned topics include:
 
-또한 메일 처리 측면에서는 다음 흐름이 유용합니다.
+- opening a terminal inside Colab,
+- installing OpenClaw,
+- running onboarding,
+- preparing external accounts,
+- connecting Telegram for conversation,
+- creating a GitHub repository for structured task tracking,
+- connecting Gmail through Maton,
+- reading emails,
+- creating automatic draft replies for important messages,
+- and setting up recurring refresh/update workflows.
 
-- 새 메일 읽기
-- 중요한 메일만 추리기
-- 짧게 요약하기
-- 답장 초안 만들기
-- 실제 발송은 사람 확인 후 진행하기
+---
 
-즉, 단순한 메일 자동발송이 아니라
-**"읽기 → 요약 → 초안 생성 → 사람 검토"** 흐름을 만드는 것이 목적입니다.
+## Core idea
 
-## 현재 정리된 방향
+The idea behind ColabCraw is simple:
 
-### Gmail 워크플로
-- Gmail 메일 읽기
-- 안 읽은 메일 요약
-- 메일별 답장 초안 생성
-- 필요하면 Gmail Draft로 임시 저장
-- 실제 발송은 자동으로 하지 않음
+1. Open Google Colab
+2. Start a terminal inside the notebook
+3. Install OpenClaw
+4. Onboard and configure it
+5. Connect supporting services
+6. Build practical automations around email, GitHub, and scheduled refresh tasks
 
-### GitHub 활용 아이디어
-이전에는 메일 1개당 이슈 1개를 만들고,
-이슈 댓글에 답장 초안을 남기는 흐름도 검토했습니다.
+Colab is not the best long-running production environment, but it is very good for:
 
-관련 문서는 아래에 남겨두었습니다.
-- `docs/email-issue-workflow.md`
-- `.github/ISSUE_TEMPLATE/email_from_gmail.md`
-- `.github/labels-plan.md`
-- `.github/comment-templates.md`
+- testing,
+- prototyping,
+- demos,
+- teaching,
+- and quickly validating workflows.
 
-다만 현재는 더 단순하게,
-**GitHub보다 Gmail Draft 중심 흐름**이 더 적합한 방향으로 보고 있습니다.
+---
 
-## 포함된 파일
+## Planned Colab setup flow
 
-- `docs/email-issue-workflow.md` : Gmail → GitHub Issue → 답장 초안 워크플로 문서
-- `.github/ISSUE_TEMPLATE/email_from_gmail.md` : 메일 이슈 템플릿
-- `.github/labels-plan.md` : 라벨 설계안
-- `.github/comment-templates.md` : 코멘트 템플릿
+### 1. Open Google Colab
 
-## 추천 운영 원칙
+Start from a fresh Google Colab notebook.
 
-- 자동은 **초안 생성까지**
-- 실제 발송은 **반드시 사람 승인 후**
-- 광고성 메일은 기본적으로 초안 생성 생략 가능
-- 민감한 메일은 더 보수적으로 처리
+### 2. Launch a terminal in Colab
 
-## 앞으로 붙일 수 있는 것
+In a notebook cell, run:
 
-- Colab notebook 예제
-- Gmail Draft 자동 생성 스크립트
-- 메일 중요도 분류 규칙
-- 업무 메일 전용 답장 템플릿
-- 실제 발송 전 검토 워크플로
+```python
+!pip install colab-xterm
+%load_ext colabxterm
+%xterm
+```
 
-## 관련 링크
+This opens a terminal inside Colab so you can work with shell commands more naturally.
 
-- OpenClaw: https://github.com/openclaw/openclaw
-- Docs: https://docs.openclaw.ai
+### 3. Install OpenClaw in the terminal
+
+Inside the Colab terminal, run:
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+openclaw onboard --install-daemon
+```
+
+This installs OpenClaw and starts the onboarding flow.
+
+---
+
+## Accounts to prepare before full configuration
+
+Before fully configuring OpenClaw, this project assumes you create and prepare the following accounts/services:
+
+- **Telegram** — used to communicate with OpenClaw
+- **GitHub** — used for repository-based workflow and tracking
+- **Gmail** — used for reading incoming email and preparing replies
+- **Maton** (<https://www.maton.ai>) — used to connect Gmail safely through managed integration
+
+These services together make it possible to build a useful automation loop.
+
+---
+
+## Intended workflow
+
+This repository is being shaped around the following practical scenario:
+
+### GitHub repository as a working surface
+Create a GitHub repository and use it as a place to store:
+
+- notes,
+- collected information,
+- workflow docs,
+- automation scripts,
+- and periodic update results.
+
+### Periodic information refresh
+The system should be able to periodically refresh or collect information that the user wants to track.
+
+Examples:
+
+- repository status,
+- scheduled summaries,
+- email-related updates,
+- recurring task results,
+- and lightweight monitoring outputs.
+
+### Gmail reading and draft reply generation
+The system should be able to:
+
+- read Gmail messages,
+- identify important emails,
+- summarize them,
+- and automatically create **draft replies** for those important emails.
+
+The important distinction is:
+
+- **draft generation can be automated**
+- **actual sending should remain human-approved**
+
+That makes the workflow safer and more realistic.
+
+---
+
+## Why this is useful
+
+This setup can act like a lightweight personal operations assistant.
+
+For example, it can help with:
+
+- checking email,
+- preparing reply drafts,
+- tracking work in GitHub,
+- keeping periodic summaries up to date,
+- and turning Colab into a quick experimentation environment for OpenClaw-based workflows.
+
+---
+
+## Repository status
+
+This repository is currently being prepared as a more detailed guide.
+
+The next iterations are expected to include:
+
+- a fuller setup tutorial,
+- Gmail + Maton integration notes,
+- Telegram connection notes,
+- GitHub workflow examples,
+- and Colab-specific cautions and limitations.
+
+---
+
+## Related links
+
+- OpenClaw: <https://github.com/openclaw/openclaw>
+- OpenClaw Docs: <https://docs.openclaw.ai>
+- Maton: <https://www.maton.ai>
+- Telegram: <https://telegram.org>
+- GitHub: <https://github.com>
+- Gmail: <https://mail.google.com>
+
+---
+
+## Korean version
+
+For a Korean version of this document, see [README_ko.md](./README_ko.md).
