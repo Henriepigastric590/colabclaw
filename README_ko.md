@@ -81,35 +81,30 @@ flowchart LR
     E --> J[작업 추적]
     E --> K[주기적 갱신]
 ```
+---
+## 🛠 전체 설정 가이드
 
+```mermaid
+timeline
+    title ColabClaw 설정 여정
+    section 환경 구축
+        Colab 접속 : 새 노트북 열기
+        터미널 실행 : colab-xterm 설치
+        OpenClaw 설치 : curl + 온보딩
+    section 서비스 연결
+        Telegram : 채팅 인터페이스 설정
+        GitHub : 워크스페이스 저장소 생성
+        Maton : Gmail 안전 연결
+    section 자동화 구성
+        메일 읽기 : 수신 메일 요약
+        초안 생성 : 답장 초안 자동 작성
+        주기적 갱신 : 정보 주기 업데이트
+```
 ---
 
 ## 🚀 빠른 시작
 
-### Step 1: Google Colab 접속
-
-[Google Colab](https://colab.research.google.com)에서 새 노트북을 엽니다.
-
-### Step 2: 터미널 실행
-
-```python
-!pip install colab-xterm
-%load_ext colabxterm
-%xterm
-```
-
-### Step 3: OpenClaw 설치
-
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-openclaw onboard --install-daemon
-```
-
-> ✅ 완료! OpenClaw가 Colab 환경에서 실행됩니다.
-
----
-
-## 🔑 필요한 계정
+### Step 0: 필요한 계정 준비
 
 전체 워크플로를 구성하기 전에 아래 서비스를 준비하세요:
 
@@ -135,26 +130,81 @@ flowchart TD
 | **Gmail** | 메일 읽기 & 답장 초안 생성 | [mail.google.com](https://mail.google.com) |
 | **Maton** | 안전한 Gmail 연결 | [maton.ai](https://www.maton.ai) |
 
+### Step 1: Google Colab 접속
+
+[Google Colab](https://colab.research.google.com)에서 새 노트북을 엽니다.
+
+### Step 2: 터미널 실행
+
+아래 페이지에서 하단에 터미널 부분을 클릭합니다.
+
+<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/a9f8fbac-0dad-44a8-8b8d-5e01e64371ad" />
+
+### Step 3: OpenClaw 설치
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/55a9b3d3-e28f-4b57-b91e-371d61039aa5" />
+
+설치가 완료되면 아래와 같이 질문이 나오는 데, 보기에 따라해주시면 됩니다. 
+
+◇  I understand this is personal-by-default and shared/multi-user use requires lock-down. Continue?
+│  Yes
+◇  Setup mode
+│  QuickStart
+◇  Model/auth provider
+│  OpenAI
+◇  OpenAI auth method
+│  OpenAI Codex (ChatGPT OAuth)
+◇  Paste the authorization code (or full redirect URL):
+│  http://localhost:1455/auth/callback?code=oaistb_ac_1SZn995Ut-nebUP1hVMc&scope=openid+profile+email+offline_access&state=653d71043b52
+◇  Default model
+│  Keep current (openai-codex/gpt-5.4)
+◇  Select channel (QuickStart)
+│  Telegram (Bot API)
+◇  How do you want to provide this Telegram bot token?
+│  Enter Telegram bot token
+◇  Search provider
+│  DuckDuckGo Search (experimental)
+◇  OpenAI auth method
+│  OpenAI Codex (ChatGPT OAuth)
+◇  Configure skills now? (recommended)
+│  Yes
+◇  Enable hooks?
+│  Skip for now
+
+설정을 완료했다면 아래 명령어로 실행합니다.
+
+```bash
+openclaw gateway run --verbose
+```
 ---
 
-## 🛠 전체 설정 가이드
+### 텔레그램 연동
 
-```mermaid
-timeline
-    title ColabClaw 설정 여정
-    section 환경 구축
-        Colab 접속 : 새 노트북 열기
-        터미널 실행 : colab-xterm 설치
-        OpenClaw 설치 : curl + 온보딩
-    section 서비스 연결
-        Telegram : 채팅 인터페이스 설정
-        GitHub : 워크스페이스 저장소 생성
-        Maton : Gmail 안전 연결
-    section 자동화 구성
-        메일 읽기 : 수신 메일 요약
-        초안 생성 : 답장 초안 자동 작성
-        주기적 갱신 : 정보 주기 업데이트
+텔레그램에서 해당봇을 클릭한 뒤 /start 메시지를 보내면 아래와 같은 메시지를 받으실 수 있습니다. 
+
+OpenClaw: access not configured.
+Your Telegram user id: 6XXX169904
+Pairing code: T72W8XXX
+Ask the bot owner to approve with:
+openclaw pairing approve telegram T72W8XXX
+
+그럼 다시 터미널로 돌아가서 Ctrl+c로 실행을 종료한 뒤 아래 명령어를 입력합니다. 
+
+```bash
+openclaw pairing approve telegram T72W8XXX
 ```
+
+페어링이 완료되었다는 메시지가 뜨면 다시 오픈클로를 실행시킵니다. 
+
+```bash
+openclaw gateway run --verbose
+```
+
+그 다음 텔레그램을 통해서 인사를 하면 서로 어떻게 불러주면 좋을 지 스스로를 어떻게 정의할 지 등을 물어보면 원하시는 대로 답을 하면 된다.
 
 ### 📁 GitHub를 워크스페이스로 활용
 
@@ -188,6 +238,12 @@ flowchart TD
 
 > 💡 **핵심 원칙:** 초안 생성은 자동화, 실제 발송은 반드시 사람이 승인한 후에만!
 
+Gmail + Maton 조합으로 이메일을 연결하고 싶다고 말하고, Maton API Key를 Maton 페이지에서 할당 받은 뒤 아래 명령을 터미널에서 실행시킨다. 기존에 구동 중인 OpenClaw가 있다면 종료했다가 아래 명령 실행 후 다시 실행시킨다.
+
+```bash
+export MATON_API_KEY='XXXXXXX'
+```
+
 ### 🔄 주기적 갱신
 
 반복 작업을 스케줄링하여 워크스페이스를 최신 상태로 유지합니다:
@@ -197,23 +253,6 @@ flowchart TD
 - 📧 이메일 관련 업데이트 모니터링
 - 🔁 반복 작업 결과 수집
 - 📡 가벼운 모니터링 출력 저장
-
----
-
----
-
-## 📍 로드맵
-
-- [x] 저장소 구축
-- [x] 기본 README & 문서 작성
-- [x] 이메일 → 이슈 워크플로 설계
-- [ ] 스크린샷 포함 상세 Colab 설정 튜토리얼
-- [ ] Gmail + Maton 연동 가이드
-- [ ] Telegram 연결 워크스루
-- [ ] GitHub 워크플로 예시
-- [ ] 답장 초안 생성 예시
-- [ ] 주기적 갱신 자동화 예시
-- [ ] Colab 한계 및 모범 사례
 
 ---
 
