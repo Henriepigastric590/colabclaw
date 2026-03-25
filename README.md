@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="./README.md">English</a> | <a href="./README_ko.md">한국어</a>
+</p>
+
 <div align="center">
 
 # 🦀 ColabClaw
@@ -21,10 +25,10 @@ Not just installation — **real workflows** for email, GitHub, and scheduled ta
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/stargazers)
-[![Forks](https://img.shields.io/github/forks/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/network/members)
-[![Watchers](https://img.shields.io/github/watchers/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/watchers)
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/commits/main)
+[![Stars](https://img.shields.io/github/stars/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/stargazers)
+[![Forks](https://img.shields.io/github/forks/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/network/members)
+[![Watchers](https://img.shields.io/github/watchers/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/watchers)
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/commits/main)
 
 </div>
 
@@ -257,7 +261,7 @@ mindmap
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabcraw&type=Date)](https://star-history.com/#tykimos/colabcraw&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabclaw&type=Date)](https://star-history.com/#tykimos/colabclaw&Date)
 
 ---
 
@@ -266,17 +270,17 @@ mindmap
 Contributions are welcome! Feel free to:
 
 - ⭐ Star this repository
-- 🐛 Open an [Issue](https://github.com/tykimos/colabcraw/issues)
-- 🔀 Submit a [Pull Request](https://github.com/tykimos/colabcraw/pulls)
+- 🐛 Open an [Issue](https://github.com/tykimos/colabclaw/issues)
+- 🔀 Submit a [Pull Request](https://github.com/tykimos/colabclaw/pulls)
 
 ---
 
 ## 📊 Activity
 
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw?label=Last%20Commit)](https://github.com/tykimos/colabcraw/commits/main)
-[![Issues](https://img.shields.io/github/issues/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/issues)
-[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/pulls)
-[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabcraw)](https://github.com/tykimos/colabcraw)
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw?label=Last%20Commit)](https://github.com/tykimos/colabclaw/commits/main)
+[![Issues](https://img.shields.io/github/issues/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/issues)
+[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/pulls)
+[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabclaw)](https://github.com/tykimos/colabclaw)
 
 ---
 
@@ -292,6 +296,6 @@ This project is licensed under the MIT License.
 
 **Made with ❤️ for the AI automation community**
 
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabcraw&label=Visitors&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabcraw)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabclaw&label=Visitors&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabclaw)
 
 </div>

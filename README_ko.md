@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="./README.md">English</a> | <a href="./README_ko.md">한국어</a>
+</p>
+
 <div align="center">
 
 # 🦀 ColabClaw
@@ -21,10 +25,10 @@
 
 <br/>
 
-[![Stars](https://img.shields.io/github/stars/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/stargazers)
-[![Forks](https://img.shields.io/github/forks/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/network/members)
-[![Watchers](https://img.shields.io/github/watchers/tykimos/colabcraw?style=social)](https://github.com/tykimos/colabcraw/watchers)
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/commits/main)
+[![Stars](https://img.shields.io/github/stars/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/stargazers)
+[![Forks](https://img.shields.io/github/forks/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/network/members)
+[![Watchers](https://img.shields.io/github/watchers/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/watchers)
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/commits/main)
 
 </div>
 
@@ -257,7 +261,7 @@ mindmap
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabcraw&type=Date)](https://star-history.com/#tykimos/colabcraw&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabclaw&type=Date)](https://star-history.com/#tykimos/colabclaw&Date)
 
 ---
 
@@ -266,17 +270,17 @@ mindmap
 기여를 환영합니다! 다음 방법으로 참여해 주세요:
 
 - ⭐ 이 저장소에 스타 남기기
-- 🐛 [이슈](https://github.com/tykimos/colabcraw/issues) 열기
-- 🔀 [풀 리퀘스트](https://github.com/tykimos/colabcraw/pulls) 제출하기
+- 🐛 [이슈](https://github.com/tykimos/colabclaw/issues) 열기
+- 🔀 [풀 리퀘스트](https://github.com/tykimos/colabclaw/pulls) 제출하기
 
 ---
 
 ## 📊 활동
 
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabcraw?label=마지막%20커밋)](https://github.com/tykimos/colabcraw/commits/main)
-[![Issues](https://img.shields.io/github/issues/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/issues)
-[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabcraw)](https://github.com/tykimos/colabcraw/pulls)
-[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabcraw)](https://github.com/tykimos/colabcraw)
+[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw?label=마지막%20커밋)](https://github.com/tykimos/colabclaw/commits/main)
+[![Issues](https://img.shields.io/github/issues/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/issues)
+[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/pulls)
+[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabclaw)](https://github.com/tykimos/colabclaw)
 
 ---
 
@@ -292,6 +296,6 @@ mindmap
 
 **AI 자동화 커뮤니티를 위해 ❤️으로 만들었습니다**
 
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabcraw&label=방문자&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabcraw)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabclaw&label=방문자&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabclaw)
 
 </div>
