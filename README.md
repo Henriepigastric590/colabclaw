@@ -18,8 +18,7 @@
 
 <br/>
 
-**ColabClaw** turns Google Colab into a lightweight personal automation hub powered by OpenClaw.
-Not just installation — **real workflows** for email, GitHub, and scheduled tasks.
+### *"The fastest, easiest way to learn OpenClaw — with a practical email assistant use case!"*
 
 [🚀 Quick Start](#-quick-start) · [📋 Features](#-features) · [🔄 Workflow](#-workflow-overview) · [🛠 Setup](#-full-setup-guide) · [🇰🇷 한국어](./README_ko.md)
 
@@ -31,6 +30,23 @@ Not just installation — **real workflows** for email, GitHub, and scheduled ta
 [![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/commits/main)
 
 </div>
+
+---
+
+## Why ColabClaw?
+
+The most common stories we hear from the OpenClaw community:
+
+- "I gave up after running into environment conflicts during installation"
+- "I wasted half a day on Python version and dependency issues"
+- "I'm hesitant to install unfamiliar tools on my personal machine"
+- "I just want to try it out, but the setup process is too long"
+
+While teaching and learning OpenClaw, we've seen **too many people give up at the installation step**. The tool itself is great, but they get stuck before even starting.
+
+So we thought — **what if you could run it directly on Google Colab?**
+
+Of course, Colab resets when the session ends, so it's not suitable for always-on production use. But for the **learning phase**, you can experience OpenClaw's core features right away without any installation hassle. No more giving up out of setup fatigue — you can even build a practical email assistant use case hands-on. That's ColabClaw.
 
 ---
 
