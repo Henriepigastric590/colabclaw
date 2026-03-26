@@ -84,34 +84,31 @@ flowchart LR
 
 ---
 
-## 🚀 Quick Start
+## 🛠 Full Setup Guide
 
-### Step 1: Open Google Colab
-
-Start a fresh [Google Colab notebook](https://colab.research.google.com).
-
-### Step 2: Launch Terminal
-
-```python
-!pip install colab-xterm
-%load_ext colabxterm
-%xterm
+```mermaid
+timeline
+    title ColabClaw Setup Journey
+    section Environment
+        Open Colab : Start a fresh notebook
+        Launch Terminal : Install colab-xterm
+        Install OpenClaw : curl + onboard
+    section Connections
+        Telegram : Chat interface setup
+        GitHub : Create workspace repo
+        Maton : Connect Gmail safely
+    section Automation
+        Email Reading : Summarize incoming mail
+        Draft Generation : Auto-create reply drafts
+        Scheduled Refresh : Periodic info updates
 ```
-
-### Step 3: Install OpenClaw
-
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-openclaw onboard --install-daemon
-```
-
-> ✅ That's it! OpenClaw is now running inside your Colab environment.
-
 ---
 
-## 🔑 Required Accounts
+## 🚀 Quick Start
 
-Before configuring the full workflow, set up these services:
+### Step 0: Prepare Required Accounts
+
+Set up the following services before configuring the full workflow:
 
 ```mermaid
 flowchart TD
@@ -135,26 +132,81 @@ flowchart TD
 | **Gmail** | Read emails & generate draft replies | [mail.google.com](https://mail.google.com) |
 | **Maton** | Secure Gmail connection | [maton.ai](https://www.maton.ai) |
 
+### Step 1: Open Google Colab
+
+Start a fresh [Google Colab notebook](https://colab.research.google.com).
+
+### Step 2: Launch Terminal
+
+Click the terminal section at the bottom of the page.
+
+<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/a9f8fbac-0dad-44a8-8b8d-5e01e64371ad" />
+
+### Step 3: Install OpenClaw
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/55a9b3d3-e28f-4b57-b91e-371d61039aa5" />
+
+Once installation is complete, you'll be prompted with a series of questions. Follow the example below:
+
+◇  I understand this is personal-by-default and shared/multi-user use requires lock-down. Continue?
+│  Yes
+◇  Setup mode
+│  QuickStart
+◇  Model/auth provider
+│  OpenAI
+◇  OpenAI auth method
+│  OpenAI Codex (ChatGPT OAuth)
+◇  Paste the authorization code (or full redirect URL):
+│  http://localhost:1455/auth/callback?code=oaistb_ac_1SZn995Ut-nebUP1hVMc&scope=openid+profile+email+offline_access&state=653d71043b52
+◇  Default model
+│  Keep current (openai-codex/gpt-5.4)
+◇  Select channel (QuickStart)
+│  Telegram (Bot API)
+◇  How do you want to provide this Telegram bot token?
+│  Enter Telegram bot token
+◇  Search provider
+│  DuckDuckGo Search (experimental)
+◇  OpenAI auth method
+│  OpenAI Codex (ChatGPT OAuth)
+◇  Configure skills now? (recommended)
+│  Yes
+◇  Enable hooks?
+│  Skip for now
+
+Once setup is complete, run OpenClaw with:
+
+```bash
+openclaw gateway run --verbose
+```
 ---
 
-## 🛠 Full Setup Guide
+### Telegram Integration
 
-```mermaid
-timeline
-    title ColabClaw Setup Journey
-    section Environment
-        Open Colab : Start a fresh notebook
-        Launch Terminal : Install colab-xterm
-        Install OpenClaw : curl + onboard
-    section Connections
-        Telegram : Chat interface setup
-        GitHub : Create workspace repo
-        Maton : Connect Gmail safely
-    section Automation
-        Email Reading : Summarize incoming mail
-        Draft Generation : Auto-create reply drafts
-        Scheduled Refresh : Periodic info updates
+Send `/start` to your bot in Telegram. You'll receive a message like:
+
+OpenClaw: access not configured.
+Your Telegram user id: 6XXX169904
+Pairing code: T72W8XXX
+Ask the bot owner to approve with:
+openclaw pairing approve telegram T72W8XXX
+
+Go back to the terminal, stop the running instance with Ctrl+C, then run:
+
+```bash
+openclaw pairing approve telegram T72W8XXX
 ```
+
+Once pairing is confirmed, restart OpenClaw:
+
+```bash
+openclaw gateway run --verbose
+```
+
+Then say hello through Telegram — it will ask how you'd like to be called and how it should introduce itself. Answer as you prefer.
 
 ### 📁 GitHub as Your Workspace
 
@@ -188,6 +240,12 @@ flowchart TD
 
 > 💡 **Key Principle:** Draft generation is automated. Actual sending requires human approval.
 
+To connect email via Gmail + Maton, tell OpenClaw you'd like to set up email integration, then get a Maton API Key from the Maton page and run the following in your terminal. If OpenClaw is already running, stop it first, run the command, then restart.
+
+```bash
+export MATON_API_KEY='XXXXXXX'
+```
+
 ### 🔄 Periodic Refresh
 
 Schedule recurring tasks to keep your workspace updated:
@@ -197,23 +255,6 @@ Schedule recurring tasks to keep your workspace updated:
 - 📧 Email-related update monitoring
 - 🔁 Recurring task result collection
 - 📡 Lightweight monitoring outputs
-
----
-
----
-
-## 📍 Roadmap
-
-- [x] Repository setup
-- [x] Basic README & documentation
-- [x] Email → Issue workflow design
-- [ ] Full Colab setup tutorial with screenshots
-- [ ] Gmail + Maton integration guide
-- [ ] Telegram connection walkthrough
-- [ ] GitHub workflow examples
-- [ ] Draft reply generation examples
-- [ ] Scheduled refresh automation examples
-- [ ] Colab limitations & best practices
 
 ---
 
