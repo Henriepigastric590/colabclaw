@@ -150,6 +150,7 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 
 설치가 완료되면 아래와 같이 질문이 나오는 데, 보기에 따라해주시면 됩니다. 
 
+```
 ◇  I understand this is personal-by-default and shared/multi-user use requires lock-down. Continue?
 │  Yes
 ◇  Setup mode
@@ -174,6 +175,7 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 │  Yes
 ◇  Enable hooks?
 │  Skip for now
+```
 
 설정을 완료했다면 아래 명령어로 실행합니다.
 
